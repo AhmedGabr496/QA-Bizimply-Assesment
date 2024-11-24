@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-24T19:12:04.365Z",
+    "end": "2024-11-24T19:12:36.030Z",
+    "duration": 31665,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53c3140c-7211-4e59-a141-fea000c8300f",
+      "title": "",
+      "fullFile": "cypress/e2e/unavailabilityRequest.cy.js",
+      "file": "cypress/e2e/unavailabilityRequest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2cc160f-4526-4cca-833f-7dc40d418012",
+          "title": "New unavailability requests tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new unavailability ",
+              "fullTitle": "New unavailability requests tests Create a new unavailability ",
+              "timedOut": null,
+              "duration": 31600,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const today = new Date(); // Ensure today is defined\nconst todayDate = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;\nconst futureDate = new Date(today);\nfutureDate.setDate(today.getDate() + 3);\nconst formattedFutureDate = `${futureDate.getDate().toString().padStart(2, '0')}/${(futureDate.getMonth() + 1).toString().padStart(2, '0')}/${futureDate.getFullYear()}`;\n_SchedulesPage.default.visitUnavailabilityPage();\n_unavailabilityPage.default.createUnavailabilityRequest('Recurring', todayDate, formattedFutureDate, '01:00', '03:00', 'Test unavailbilty');",
+              "err": {},
+              "uuid": "5cd7ced2-a700-4a9f-945c-cc42b57ae04e",
+              "parentUUID": "e2cc160f-4526-4cca-833f-7dc40d418012",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5cd7ced2-a700-4a9f-945c-cc42b57ae04e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
